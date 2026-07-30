@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROTECTEURS DZ - واقي أجهزتك من الكهرباء</title>
+    <meta name="description" content="حماية ذكية لأجهزتك الكهربائية من ارتفاع وانخفاض الجهد">
+    
+    <!-- Facebook Pixel -->
+    <script>
+        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init', '1677998319917755');fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1677998319917755&ev=PageView&noscript=1" /></noscript>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            background-color: #ffffff;
+        }
+        
+        body {
+            font-family: 'Tajawal', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background-color: #ffffff;
+            color: #0f172a;
+            line-height: 1.6;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+            color: white;
+            padding: 24px 16px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(220, 38, 38, 0.2);
+        }
+        
+        .header h1 {
+            font-size: 28px;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+        
+        .header p {
+            color: #fecaca;
+            font-size: 14px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 24px 16px;
+        }
+        
+        .product {
+            display: flex;
+            gap: 16px;
+            padding: 16px;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            margin-bottom: 16px;
+            background: #f8fafc;
+            align-items: center;
+        }
+        
+        .product-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 8px;
+            object-fit: contain;
+            background: white;
+            flex-shrink: 0;
+        }
+        
+        .product-info {
+            flex: 1;
+        }
+        
+        .product-name {
+            font-size: 16px;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 4px;
+        }
+        
+        .product-specs {
+            font-size: 14px;
+            color: #64748b;
+            margin-bottom: 8px;
+        }
+        
+        .quantity-control {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+        
+        .quantity-btn {
+            width: 32px;
+            height: 32px;
+            border: 2px solid #dc2626;
+            background: white;
+            color: #dc2626;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 700;
+            transition: all 0.2s;
+        }
+        
+        .quantity-btn:hover {
+            background: #fca5a5;
+            border-color: #dc2626;
+        }
+        
+        .quantity-input {
+            width: 50px;
+            padding: 8px;
+            border: 1px solid #e2e8f0;
+            border-radius: 4px;
+            text-align: center;
+            font-weight: 600;
+        }
+        
+        .form-section {
+            background: #f8fafc;
+            padding: 24px;
+            border-radius: 12px;
+            margin-top: 24px;
+            border: 1px solid #e2e8f0;
+        }
+        
+        .form-section h2 {
+            font-size: 18px;
+            margin-bottom: 16px;
+            color: #0f172a;
+        }
+        
+        .form-group {
+            margin-bottom: 16px;
+        }
+        
+        label {
+            display: block;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #475569;
+        }
+        
+        input, select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 14px;
+            font-family: inherit;
+        }
+        
+        input:focus, select:focus {
+            outline: none;
+            border-color: #dc2626;
+            box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+        }
+        
+        .delivery-buttons {
+            display: flex;
+            gap: 12px;
+            margin-top: 12px;
+        }
+        
+        .delivery-btn {
+            flex: 1;
+            padding: 12px;
+            border: 2px solid #dc2626;
+            background: white;
+            color: #dc2626;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .delivery-btn.active {
+            background: #dc2626;
+            color: white;
+        }
+        
+        .delivery-btn:hover {
+            background: #fca5a5;
+        }
+        
+        .summary {
+            background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+            padding: 20px;
+            border-radius: 12px;
+            border: 2px solid #fca5a5;
+            margin-top: 20px;
+        }
+        
+        .summary-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 12px;
+            font-weight: 600;
+            color: #1e293b;
+        }
+        
+        .summary-total {
+            display: flex;
+            justify-content: space-between;
+            font-size: 18px;
+            color: #dc2626;
+            padding-top: 12px;
+            border-top: 2px solid #fca5a5;
+            margin-top: 12px;
+        }
+        
+        .submit-btn {
+            width: 100%;
+            padding: 16px;
+            background: #dc2626;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background 0.2s;
+        }
+        
+        .submit-btn:hover {
+            background: #b91c1c;
+        }
+
+        .submit-btn:disabled {
+            background: #f87171;
+            cursor: not-allowed;
+        }
+        
+        .features {
+            margin-top: 40px;
+            padding: 24px;
+            background: #f1f5f9;
+            border-radius: 12px;
+        }
+        
+        .features h3 {
+            font-size: 20px;
+            margin-bottom: 16px;
+            color: #0f172a;
+        }
+        
+        .features ul {
+            list-style: none;
+            display: grid;
+            gap: 12px;
+        }
+        
+        .features li {
+            display: flex;
+            gap: 8px;
+            color: #475569;
+        }
+        
+        .features li:before {
+            content: "✓";
+            color: #dc2626;
+            font-weight: 700;
+            min-width: 20px;
+        }
+        
+        .ordered-products {
+            padding-bottom: 12px;
+            border-bottom: 2px solid #fca5a5;
+            margin-bottom: 12px;
+        }
+        
+        .ordered-products-label {
+            font-size: 12px;
+            color: #64748b;
+            margin-bottom: 8px;
+        }
+        
+        .ordered-product-item {
+            font-size: 14px;
+            color: #475569;
+            margin-bottom: 4px;
+        }
+        
+        @media (max-width: 768px) {
+            .product {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .delivery-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <h1>حماية ذكية لأجهزتك</h1>
+            <p>جميع الحلول الموثوقة لحماية أجهزتك الكهربائية</p>
+        </div>
+    </div>
+    
+    <div class="container">
+        <form id="orderForm">
+            <!-- Products Section -->
+            <div class="form-section">
+                <h2>اختر المنتجات والكميات</h2>
+                <div id="productsContainer"></div>
+            </div>
+            
+            <!-- Wilaya Section -->
+            <div class="form-section">
+                <div class="form-group">
+                    <label for="wilaya">اختر الولاية (لحساب التوصيل):</label>
+                    <select id="wilaya" required>
+                        <option value="">-- اختر الولاية --</option>
+                    </select>
+                </div>
+                
+                <!-- Delivery Method -->
+                <div id="deliveryMethodDiv" style="display: none;">
+                    <label>طريقة التوصيل:</label>
+                    <div class="delivery-buttons">
+                        <button type="button" class="delivery-btn active" data-method="home">المنزل</button>
+                        <button type="button" class="delivery-btn" data-method="office">المكتب</button>
+                    </div>
+                </div>
+                
+                <!-- Price Summary -->
+                <div id="summaryDiv" style="display: none;" class="summary">
+                    <div class="ordered-products">
+                        <div class="ordered-products-label">المنتجات المطلوبة:</div>
+                        <div id="orderedProductsList"></div>
+                    </div>
+                    <div class="summary-item">
+                        <span>السعر:</span>
+                        <span id="productPrice">0</span>
+                    </div>
+                    <div class="summary-item">
+                        <span id="deliveryLabel">التوصيل:</span>
+                        <span id="deliveryPrice">0</span>
+                    </div>
+                    <div class="summary-total">
+                        <span>المجموع النهائي:</span>
+                        <span id="totalPrice">0</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Contact Info Section -->
+            <div class="form-section">
+                <h2>معلومات التواصل</h2>
+                <div class="form-group">
+                    <label for="name">الاسم الكامل:</label>
+                    <input type="text" id="name" placeholder="أدخل اسمك الكامل" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">رقم الهاتف:</label>
+                    <input type="tel" id="phone" placeholder="0791234567" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">البلدية/العنوان:</label>
+                    <input type="text" id="address" placeholder="أدخل عنوان التوصيل" required>
+                </div>
+                <button type="submit" class="submit-btn">اطلب الآن</button>
+            </div>
+            
+            <!-- Features Section -->
+            <div class="features">
+                <h3>مميزات البروتكتور الذكي</h3>
+                <ul>
+                    <li>حماية من ارتفاع وانخفاض الجهد الكهربائي</li>
+                    <li>قطع التيار تلقائياً عند وجود خطر</li>
+                    <li>إعادة تشغيل تلقائية بعد استقرار الكهرباء</li>
+                    <li>شاشة رقمية لعرض الفولت والأمبير</li>
+                    <li>جودة عالية وأداء موثوق</li>
+                    <li>توصيل إلى جميع ولايات الجزائر</li>
+                </ul>
+            </div>
+        </form>
+
+        <div id="successBox" style="display:none; text-align:center; padding: 40px 20px; background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%); border: 2px solid #fca5a5; border-radius: 12px; margin-top: 24px;">
+            <div style="font-size: 48px; margin-bottom: 12px;">✅</div>
+            <h2 style="color: #0f172a; margin-bottom: 8px; font-size: 20px;">تم استلام الطلبية</h2>
+            <p style="color: #475569; font-size: 15px;">سنتصل بك قريباً لتأكيد الشحن</p>
+        </div>
+    </div>
+
+    <script>
+        // Products Data
+        const PRODUCTS = [
+            {
+                id: 1,
+                name: 'BMS ELECTRIC',
+                voltage: '220V',
+                amp: '40A',
+                price: 2500,
+                image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/photo_6003437512224869754_y-nfJAAhxkTrw6I5EtQSftmwvhOphJlV.jpg',
+            },
+            {
+                id: 2,
+                name: 'CHNT',
+                voltage: '220V',
+                amp: '40A',
+                price: 4350,
+                image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/photo_6003437512224869758_y-yuZjD0pUt9mmLkS3qFFi2iG8lcK4Ti.jpg',
+            },
+            {
+                id: 3,
+                name: 'Protecteur Prise',
+                voltage: '220V',
+                amp: '20A',
+                price: 2600,
+                image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/photo_6003437512224869756_y-o3gUBZNXfPJYUygWBpt1Qo1PG22ghJ.jpg',
+            },
+            {
+                id: 4,
+                name: 'Prise',
+                voltage: '220V',
+                amp: '16A',
+                price: 2600,
+                image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/photo_6003437512224869757_y-BEtRuePf0TAfbw0L7N0h98GNz2mz3h.jpg',
+            },
+            {
+                id: 5,
+                name: 'Protecteur YSMAX',
+                voltage: '380V',
+                amp: 'متعدد',
+                price: 5250,
+                image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/photo_6003437512224869755_y%20%281%29-sqhzqYNsIDF4HreVY32j4pz5h5u4dq.jpg',
+            },
+        ];
+
+        const WILAYAS = [
+            'أدرار', 'الشلف', 'الأغواط', 'أم البواقي', 'باتنة', 'بجاية', 'بسكرة',
+            'بئر الأثر', 'الجزائر', 'الجلفة', 'جيجل', 'سطيف', 'سعيدة', 'سكيكدة',
+            'سيدي بلعباس', 'قسنطينة', 'قالمة', 'المسيلة', 'مستغانم', 'المدية',
+            'معسكر', 'ورقلة', 'وهران', 'البيض', 'اليزي', 'برج باجي مختار',
+            'تبسة', 'تلمسان', 'تيرت', 'تيارت', 'الواحات', 'خنشلة', 'دالي إبراهيم',
+            'دار البيضاء', 'تقرت', 'درعة', 'سوق أهراس', 'عين الدفلى',
+            'عين الصفراء', 'الفحيص', 'تيسمسيلت', 'الواد', 'تيبازة', 'ميلة',
+            'عين البيضاء', 'سيدي أوقيل', 'حاسي مسعود', 'الحامة', 'النعامة',
+            'بني صاف', 'بئر القادي', 'بشار', 'ريغ', 'الميا', 'سيدي بلقاسم', 'بني يسقن'
+        ];
+
+        const DELIVERY_PRICES = {
+            'أدرار': 770, 'الشلف': 320, 'الأغواط': 470, 'أم البواقي': 320, 'باتنة': 320, 'بجاية': 250,
+            'بسكرة': 420, 'بئر الأثر': 320, 'الجزائر': 270, 'الجلفة': 320, 'جيجل': 320, 'سطيف': 370,
+            'سعيدة': 320, 'سكيكدة': 320, 'سيدي بلعباس': 320, 'قسنطينة': 320, 'قالمة': 320, 'المسيلة': 420,
+            'مستغانم': 320, 'المدية': 320, 'معسكر': 320, 'ورقلة': 470, 'وهران': 320, 'البيض': 420,
+            'اليزي': 770, 'برج باجي مختار': 770, 'تبسة': 320, 'تلمسان': 320, 'تيرت': 320, 'تيارت': 320,
+            'الواحات': 770, 'خنشلة': 320, 'دالي إبراهيم': 270, 'دار البيضاء': 270, 'تقرت': 770, 'درعة': 770,
+            'سوق أهراس': 320, 'عين الدفلى': 320, 'عين الصفراء': 770, 'الفحيص': 320, 'تيسمسيلت': 320,
+            'الواد': 770, 'تيبازة': 320, 'ميلة': 320, 'عين البيضاء': 320, 'سيدي أوقيل': 320,
+            'حاسي مسعود': 770, 'الحامة': 770, 'النعامة': 770, 'بني صاف': 320, 'بئر القادي': 770,
+            'بشار': 770, 'ريغ': 770, 'الميا': 770, 'سيدي بلقاسم': 770, 'بني يسقن': 770
+        };
+
+        // Google Sheet Webhook (Apps Script Web App)
+        const SHEET_WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbxNTMwlvQTw4NQeeDF4WYgc52hX1HxU3Ug65yfX6IiD0fFSap82kBjrvFWLBTCeTlLd/exec';
+
+        // State
+        let quantities = {};
+        let selectedWilaya = '';
+        let deliveryMethod = 'home';
+
+        // Initialize
+        function init() {
+            renderProducts();
+            populateWilayas();
+            setupEventListeners();
+        }
+
+        function renderProducts() {
+            const container = document.getElementById('productsContainer');
+            container.innerHTML = PRODUCTS.map(product => `
+                <div class="product">
+                    <img src="${product.image}" alt="${product.name}" class="product-image" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22%3E%3Crect fill=%22%23f1f5f9%22 width=%22100%22 height=%22100%22/%3E%3C/svg%3E'">
+                    <div class="product-info">
+                        <div class="product-name">${product.name}</div>
+                        <div class="product-specs">${product.voltage} / ${product.amp}</div>
+                        <div style="font-weight: 700; color: #dc2626;">${product.price} DA</div>
+                    </div>
+                    <div class="quantity-control">
+                        ${quantities[product.id] 
+                            ? `
+                                <button type="button" class="quantity-btn" onclick="updateQty(${product.id}, -1)">−</button>
+                                <input type="number" class="quantity-input" value="${quantities[product.id]}" readonly>
+                                <button type="button" class="quantity-btn" onclick="updateQty(${product.id}, 1)">+</button>
+                            `
+                            : `<button type="button" class="quantity-btn" style="width: auto; padding: 8px 16px;" onclick="addProduct(${product.id})">إضافة</button>`
+                        }
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function populateWilayas() {
+            const select = document.getElementById('wilaya');
+            WILAYAS.forEach(wilaya => {
+                const option = document.createElement('option');
+                option.value = wilaya;
+                option.textContent = wilaya;
+                select.appendChild(option);
+            });
+        }
+
+        function setupEventListeners() {
+            document.getElementById('wilaya').addEventListener('change', (e) => {
+                selectedWilaya = e.target.value;
+                updateSummary();
+            });
+
+            document.querySelectorAll('[data-method]').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    deliveryMethod = e.target.dataset.method;
+                    document.querySelectorAll('[data-method]').forEach(b => b.classList.remove('active'));
+                    e.target.classList.add('active');
+                    updateSummary();
+                });
+            });
+
+            document.getElementById('orderForm').addEventListener('submit', handleSubmit);
+        }
+
+        function addProduct(id) {
+            quantities[id] = 1;
+            updateSummary();
+            renderProducts();
+        }
+
+        function updateQty(id, delta) {
+            const newQty = Math.max(0, (quantities[id] || 0) + delta);
+            if (newQty === 0) {
+                delete quantities[id];
+            } else {
+                quantities[id] = newQty;
+            }
+            updateSummary();
+            renderProducts();
+        }
+
+        function getTotalProductPrice() {
+            return Object.entries(quantities).reduce((total, [id, qty]) => {
+                const product = PRODUCTS.find(p => p.id === Number(id));
+                return total + (product?.price || 0) * qty;
+            }, 0);
+        }
+
+        function getDeliveryPrice() {
+            const basePrice = DELIVERY_PRICES[selectedWilaya] || 0;
+            return deliveryMethod === 'office' ? basePrice : basePrice + 100;
+        }
+
+        function getTotalPrice() {
+            return getTotalProductPrice() + getDeliveryPrice();
+        }
+
+        function updateSummary() {
+            if (selectedWilaya && Object.keys(quantities).length > 0) {
+                document.getElementById('deliveryMethodDiv').style.display = 'block';
+                document.getElementById('summaryDiv').style.display = 'block';
+                
+                // Update ordered products list
+                const productsList = Object.entries(quantities)
+                    .map(([id, qty]) => {
+                        const product = PRODUCTS.find(p => p.id === Number(id));
+                        return `<div class="ordered-product-item">• ${product.name} x${qty}</div>`;
+                    })
+                    .join('');
+                document.getElementById('orderedProductsList').innerHTML = productsList;
+                
+                // Update prices
+                document.getElementById('productPrice').textContent = getTotalProductPrice() + ' DA';
+                document.getElementById('deliveryLabel').textContent = `التوصيل (${deliveryMethod === 'home' ? 'المنزل' : 'المكتب'}):`;
+                document.getElementById('deliveryPrice').textContent = getDeliveryPrice() + ' DA';
+                document.getElementById('totalPrice').textContent = getTotalPrice() + ' DA';
+            } else {
+                document.getElementById('deliveryMethodDiv').style.display = 'none';
+                document.getElementById('summaryDiv').style.display = 'none';
+            }
+        }
+
+        async function handleSubmit(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const address = document.getElementById('address').value;
+
+            if (!name || !phone || !selectedWilaya || Object.keys(quantities).length === 0) {
+                alert('الرجاء ملء جميع البيانات واختيار منتج واحد على الأقل');
+                return;
+            }
+
+            const submitBtn = document.querySelector('.submit-btn');
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'جاري إرسال الطلب...';
+
+            // Track with Facebook Pixel
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'Purchase', {
+                    value: getTotalPrice(),
+                    currency: 'DZD',
+                    content_name: 'Protecteur Order',
+                });
+            }
+
+            // Build ordered items list (product objects, in the order they were added)
+            const orderedItems = Object.entries(quantities)
+                .map(([id, qty]) => {
+                    const product = PRODUCTS.find(p => p.id === Number(id));
+                    return product ? { name: product.name, qty } : null;
+                })
+                .filter(Boolean);
+
+            // Size column: product names joined -> "BMS ELECTRIC + CHNT"
+            const sizeText = orderedItems.map(item => item.name).join(' + ');
+
+            // Qta column: quantity + name, matching order -> "2 BMS ELECTRIC + 1 CHNT"
+            const qtaText = orderedItems.map(item => `${item.qty} ${item.name}`).join(' + ');
+
+            const deliveryText = deliveryMethod === 'home' ? 'توصيل للمنزل' : 'توصيل للمكتب';
+
+            const sheetData = {
+                name,
+                phone,
+                wilaya: selectedWilaya,
+                address,
+                size: sizeText,
+                qty: qtaText,
+                delivery: deliveryText,
+                note: `السعر الإجمالي: ${getTotalPrice()} DA`,
+            };
+
+            // Send to Google Sheet (Apps Script Web App)
+            try {
+                await fetch(SHEET_WEBHOOK_URL, {
+                    method: 'POST',
+                    body: JSON.stringify(sheetData),
+                });
+            } catch (error) {
+                console.error('Error sending data to sheet:', error);
+            }
+
+            // Show success message (no WhatsApp redirect)
+            document.getElementById('orderForm').style.display = 'none';
+            document.getElementById('successBox').style.display = 'block';
+            document.getElementById('successBox').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', init);
+    </script>
+</body>
+</html>
